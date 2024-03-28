@@ -9,7 +9,7 @@ const Hero = ({
   heading,
   bgSpeed = "slow-mo",
   subHeading,
-  bannerItems,
+  // bannerItems,
   tooltip,
   heroBgFill = "black",
 }) => {

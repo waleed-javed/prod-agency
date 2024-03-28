@@ -14,7 +14,7 @@ import {
 const NavBar = ({
   className,
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  NavBarItems,
+  // NavBarItems,
 }: {
   className?: string;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any,

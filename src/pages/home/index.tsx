@@ -28,7 +28,7 @@ const HomePage = () => {
         bgSpeed="fast"
         heading={data.heroSection.heading}
         subHeading={data.heroSection.subHeading}
-        bannerItems={data.servicesSection.servicesArray}
+        // bannerItems={data.servicesSection.servicesArray}
         tooltip={people}
       />
       {/* 
