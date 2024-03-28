@@ -2,7 +2,7 @@ export const data = {
   heroSection: {
     heading:
       // ["Crafting High-Performance Websites", "with Stunning Design & Speed ",],
-      ["We Make Stunning Websites", "Apps & Designs"],
+      ["We Specialize in Crafting", " Stunning Websites Apps & Designs"],
     subHeading: "— No Calls. No BS. Just Results!", // "We build websites that drive results and help your business grow. No Calls. No BS. Just Results." //"— As a tight-knit team of experts, we create memorable and emotional websites, digital experiences, and native apps"; //`— Creating cool experiences is our thing!`;
   },
   navItems: [

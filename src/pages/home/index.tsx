@@ -25,6 +25,7 @@ const HomePage = () => {
     <div className="bg-black">
       <Hero
         heroBgFill="white"
+        bgSpeed="fast"
         heading={data.heroSection.heading}
         subHeading={data.heroSection.subHeading}
         bannerItems={data.servicesSection.servicesArray}

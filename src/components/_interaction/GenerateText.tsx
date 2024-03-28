@@ -44,7 +44,7 @@ const GenerateText = ({
       <div className="mt-4">
         <div
           className={cn(
-            " text-2xl leading-snug tracking-wide text-black dark:text-white",
+            "text-sm leading-snug tracking-wide text-black md:text-lg lg:text-2xl dark:text-white",
             childClassName,
           )}
         >

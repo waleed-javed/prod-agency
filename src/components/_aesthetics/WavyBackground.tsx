@@ -13,8 +13,9 @@ const WavyBackground = ({
   colors,
   waveWidth = 170,
   backgroundFill,
-  blur = 10,
+  blur = 5,
   speed = "fast",
+  position = 0.5,
   waveOpacity = 0.6,
   ...props
 }: {
@@ -26,6 +27,7 @@ const WavyBackground = ({
   backgroundFill?: string;
   blur?: number;
   speed?: "slow-mo" | "slow" | "fast";
+  position?: number;
   waveOpacity?: number;
 }) => {
   const noise = createNoise3D();
@@ -44,7 +46,7 @@ const WavyBackground = ({
       case "slow":
         return 0.001;
       case "fast":
-        return 0.002;
+        return 0.003;
       default:
         return 0.001;
     }
@@ -54,12 +56,12 @@ const WavyBackground = ({
     canvas = canvasRef.current;
     canvas_context = canvas.getContext("2d");
     w = canvas_context.canvas.width = window.innerWidth;
-    h = canvas_context.canvas.height = window.innerHeight + 200;
+    h = canvas_context.canvas.height = window.innerHeight;
     canvas_context.filter = `blur(${blur}px)`;
     nt = 0;
     window.onresize = function () {
       w = canvas_context.canvas.width = window.innerWidth;
-      h = canvas_context.canvas.height = window.innerHeight + 200;
+      h = canvas_context.canvas.height = window.innerHeight;
       canvas_context.filter = `blur(${blur}px)`;
     };
     render();
@@ -73,9 +75,9 @@ const WavyBackground = ({
       canvas_context.beginPath();
       canvas_context.lineWidth = waveWidth || 50;
       canvas_context.strokeStyle = waveColors[i % waveColors.length];
-      for (x = 0; x < w; x += 5) {
-        const y = noise(x / 800, 0.3 * i, nt) * 100;
-        canvas_context.lineTo(x, y + h * 0.5); // adjust for height, currently at 50% of the container
+      for (x = 0; x < w; x += 10) {
+        const y = noise(x / 795, 0.3 * i, nt) * 100;
+        canvas_context.lineTo(x, y + h * position); // adjust for height, currently at 50% of the container
       }
       canvas_context.stroke();
       canvas_context.closePath();
@@ -87,7 +89,7 @@ const WavyBackground = ({
     canvas_context.fillStyle = backgroundFill || "black";
     canvas_context.globalAlpha = waveOpacity || 0.5;
     canvas_context.fillRect(0, 0, w, h);
-    drawWave(5);
+    drawWave(8);
     animationId = requestAnimationFrame(render);
   };
 
@@ -125,10 +127,10 @@ const WavyBackground = ({
       ></canvas>
       <motion.div
         initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: 30 }}
+        whileInView={{ opacity: 1, y: window.innerWidth < 768 ? -200 : 0 }}
         transition={{ delay: 1, duration: 0.4, ease: "easeInOut" }}
         className={cn(
-          "relative inset-0 z-10 rounded-2xl border bg-opacity-5 bg-gradient-to-t from-transparent to-gray-50 px-16 pb-16 backdrop-blur-lg backdrop-filter",
+          "relative inset-0 z-10 mx-8 px-4 md:mx-8 md:rounded-2xl md:border md:bg-opacity-5 md:bg-gradient-to-t md:from-transparent md:to-gray-50 md:px-8 md:pb-16 md:backdrop-blur-lg lg:px-16 lg:backdrop-filter",
           className,
         )}
         {...props}

@@ -4,19 +4,27 @@ const HeroTitle = ({ heading, subHeading, heroBgFill }) => {
   return (
     <>
       <motion.div
-        whileInView={{ y: 50 }}
-        className="poppins-bold-italic flex flex-col flex-wrap items-center justify-center gap-y-5 bg-opacity-50 bg-gradient-to-br from-purple-500 to-neutral-300 bg-clip-text py-4 text-center text-2xl font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl md:leading-snug lg:text-6xl"
+        whileInView={{ y: window.innerWidth < 768 ? 35 : 50 }}
+        className="poppins-bold-italic flex flex-col flex-wrap items-center justify-center bg-opacity-50 bg-gradient-to-br from-purple-500 to-neutral-300 bg-clip-text py-4 text-center text-[34px] font-bold tracking-tight text-transparent sm:text-3xl md:text-5xl md:leading-snug lg:gap-y-5 lg:text-6xl"
       >
-        <span className={`${heroBgFill !== "black" ? "text-black" : ""}`}>
-          {heading[0]}
-        </span>
-        <span className={`${heroBgFill !== "black" ? "text-black" : ""}`}>
-          {heading[1]}
-        </span>
+        <div className="hidden gap-4 md:flex md:flex-col">
+          <span className={`${heroBgFill !== "black" ? "text-black" : ""}`}>
+            {heading[0]}
+          </span>
+          <span className={`${heroBgFill !== "black" ? "text-black" : ""}`}>
+            {heading[1]}
+          </span>
+        </div>
+        <div className="block md:hidden">
+          <span className={`${heroBgFill !== "black" ? "text-black" : ""}`}>
+            {heading[0]}
+            {heading[1]}
+          </span>
+        </div>
       </motion.div>
       <motion.p
-        whileInView={{ y: 40 }}
-        className={`inter-var poppins-semibold mt-4 text-center text-base font-normal ${heroBgFill !== "black" ? "text-black" : "text-white"} md:text-lg`}
+        whileInView={{ y: window.innerWidth < 768 ? 10 : 40 }}
+        className={`inter-var poppins-medium md:poppins-semibold mt-4 text-center text-xs font-normal md:text-lg ${heroBgFill !== "black" ? "text-black" : "text-white"} `}
       >
         {subHeading}
       </motion.p>

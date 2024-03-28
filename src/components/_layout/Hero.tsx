@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { HeroMotion } from "../../utilities/framesManager";
+import { cn } from "../../utilities/utility";
 import WavyBackground from "../_aesthetics/WavyBackground";
 import HeroTitle from "../_interaction/HeroTitle";
 import CallToAction from "./CallToAction";
@@ -20,6 +21,8 @@ const Hero = ({
           waveWidth={170}
           waveOpacity={0.9}
           backgroundFill={heroBgFill}
+          position={window.innerWidth < 768 ? 0.45 : 0.5}
+          containerClassName={cn(window.innerWidth < 768 ? "min-h-screen" : "")}
         >
           <HeroTitle
             heading={heading}
