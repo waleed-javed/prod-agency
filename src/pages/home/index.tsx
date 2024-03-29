@@ -1,6 +1,8 @@
 import { ChatboxColors, Crisp } from "crisp-sdk-web";
 import { useEffect } from "react";
+import Footer from "../../components/_layout/Footer";
 import Hero from "../../components/_layout/Hero";
+import ProjectsDisplay from "../../components/_layout/ProjectDisplays";
 import { data, people } from "../../data/data";
 
 const HomePage = () => {
@@ -22,7 +24,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="bg-black">
+    <div className="">
       <Hero
         heroBgFill="white"
         bgSpeed="fast"
@@ -31,11 +33,10 @@ const HomePage = () => {
         // bannerItems={data.servicesSection.servicesArray}
         tooltip={people}
       />
-      {/* 
-        <ServicesComponent services={data.servicesSection.servicesArray} />
-  
-        <PricingComponent pricingInfo={data.pricingSection} />
-        <Footer /> */}
+
+      <ProjectsDisplay />
+
+      <Footer />
     </div>
   );
 };

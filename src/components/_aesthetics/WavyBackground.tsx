@@ -127,7 +127,15 @@ const WavyBackground = ({
       ></canvas>
       <motion.div
         initial={{ opacity: 0, y: -100 }}
-        whileInView={{ opacity: 1, y: window.innerWidth < 768 ? -200 : 0 }}
+        whileInView={{
+          opacity: 1,
+          y:
+            window.innerWidth < 768
+              ? window.innerWidth < 400
+                ? -50
+                : -200
+              : 0,
+        }}
         transition={{ delay: 1, duration: 0.4, ease: "easeInOut" }}
         className={cn(
           "relative inset-0 z-10 mx-8 px-4 md:mx-8 md:rounded-2xl md:border md:bg-opacity-5 md:bg-gradient-to-t md:from-transparent md:to-gray-50 md:px-8 md:pb-16 md:backdrop-blur-lg lg:px-16 lg:backdrop-filter",

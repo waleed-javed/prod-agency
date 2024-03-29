@@ -8,5 +8,5 @@ export const defaultWaveColors = [
   "#e879f9",
   "#38bdf8",
   "#818cf8",
-  "#22d3ee",
+  "#aae8ee",
 ];

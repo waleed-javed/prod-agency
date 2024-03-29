@@ -13,6 +13,13 @@ export default {
     extend: {
       // extend starts
 
+      colors: {
+        gmzBackgroundDark: "#1e1d24",
+      },
+      screens: {
+        xs: "375px",
+      },
+
       animation: {
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite", //infinity cards end

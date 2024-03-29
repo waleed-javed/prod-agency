@@ -29,7 +29,7 @@ const NavbarResponsive = () => {
             <LargeScreenMenu active={active} setActive={setActive} />
           </div>
           <div className="hidden  sm:flex">
-            <CallToActionButton btnText={"Book Call"} variant={"small"} />
+            <CallToActionButton btnText={"Get In Touch"} variant={"small"} />
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@ const Logo = () => {
         className={`relative flex h-6 items-center justify-center rounded-full bg-purple-500 px-2 capitalize md:h-10 md:px-4 dark:bg-purple-500`}
       >
         <div>
-          <p className="poppins-semibold cursor-pointer text-black hover:scale-110 hover:duration-200 dark:text-white">
+          <p className="poppins-semibold text-gmzBackgroundDark cursor-pointer hover:scale-110 hover:duration-200 dark:text-white">
             Ghamiz
           </p>
         </div>

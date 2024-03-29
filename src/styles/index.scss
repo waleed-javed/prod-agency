@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+// mission statement Css
+@import "./MissionStatement.scss";
+// @import "./FooterNavigation.scss";
+
+
+// extra classes
 @layer utilities {
   .poppins {
     font-family: "Poppins", sans-serif;

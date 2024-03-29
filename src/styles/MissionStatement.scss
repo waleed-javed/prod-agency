@@ -1,0 +1,217 @@
+section {
+    // background-color: #1E1D24;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: $background-fierce-dark;
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.75rem;
+    padding: 3rem 1rem;
+    background: linear-gradient(10deg, rgba(166, 132, 211, 0.66) 30%, white), url(https://grainy-gradients.vercel.app/noise.svg);
+
+    // background: radial-gradient(circle, rgba(166, 132, 211, 0.66), 73%, white), url(https://grainy-gradients.vercel.app/noise.svg);
+    filter: contrast(170%);
+    border-radius: 32px;
+    position: relative;
+
+
+    .quote {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+
+        img {
+            mix-blend-mode: darken;
+            opacity: 0.7;
+            width: 70%;
+        }
+    }
+
+    .mission-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+
+        .title {
+            font-family: "Recoleta";
+            font-weight: 400;
+            // font-size: $desktop-section-title-font-size;    
+        }
+    }
+
+    .mission-statement {
+        text-align: center;
+
+        p {
+            font-family: "Recoleta";
+            font-size: 1.5rem;
+            line-height: 40px;
+            margin: 3.1rem 1rem 2.5rem 1rem;
+        }
+
+    }
+
+    .mission-author {
+        display: flex;
+        flex-direction: column;
+        font-family: "Lato";
+        align-items: center;
+
+        h1 {
+            font-size: 34px;
+            font-weight: 500;
+            line-height: 71.4px;
+            word-spacing: 1.43px;
+        }
+
+        h2 {
+            opacity: 0.5;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 10px;
+            word-spacing: 1.43px;
+        }
+    }
+
+}
+
+
+// // min 320 to max 480
+// @media (min-width: $xsm) and (max-width:$sm) {
+
+
+//     .banner {
+//         flex-direction: column;
+//         justify-content: center;
+//         margin: 1.75rem;
+//         padding: 1.75rem;
+//         background: linear-gradient(50deg, rgba(166, 132, 211, 0.66) 20%, white), url(https://grainy-gradients.vercel.app/noise.svg);
+//         filter: contrast(170%);
+//         border-radius: 16px;
+
+
+//         .quote {
+//             position: absolute;
+//             top: 12%;
+//             left: 8%;
+//             // border: 2px solid red;
+
+//             img {
+//                 mix-blend-mode: color-burn;
+//                 opacity: 0.7;
+//                 width: 30%;
+//             }
+//         }
+
+//         .mission-section {
+//             width: 90%;
+
+//             .title {
+//                 font-weight: 400;
+//                 font-size: 1.75rem; //$mobile-items-title-font-size;    
+//             }
+//         }
+
+//         .mission-statement {
+
+//             text-align: justify;
+//             max-width: 80vw;
+
+//             p {
+//                 font-family: "Recoleta";
+//                 // font-size: $mobile-project-paragraph-font-size;
+//                 line-height: 20px;
+//                 margin: 1rem 0 0;
+//             }
+
+//         }
+
+//         .mission-author {
+//             h1 {
+//                 // font-size: $mobile-portfolio-paragraph-section-font-size;
+//                 line-height: 30px;
+//                 word-spacing: 1.43px;
+//             }
+
+//             h2 {
+//                 // font-size: $mobile-services-chip-font-size;
+//                 font-weight: 400;
+//                 line-height: 5px;
+//                 word-spacing: 1.43px;
+//             }
+//         }
+//     }
+// }
+
+// // Responsive xsm:320
+// @media (max-width: $xsm) {
+
+
+//     .banner {
+//         flex-direction: column;
+//         justify-content: center;
+//         margin: 1.75rem;
+//         padding: 1.75rem;
+//         background: linear-gradient(50deg, rgba(166, 132, 211, 0.66) 20%, white), url(https://grainy-gradients.vercel.app/noise.svg);
+//         filter: contrast(170%);
+//         border-radius: 16px;
+
+
+//         .quote {
+//             img {
+//                 mix-blend-mode: color-burn;
+//                 opacity: 0;
+//                 width: 30%;
+//             }
+//         }
+
+//         .mission-section {
+//             width: 90%;
+
+//             .title {
+//                 font-weight: 400;
+//                 font-size: 1.75rem; //$mobile-items-title-font-size;    
+//             }
+//         }
+
+//         .mission-statement {
+
+//             text-align: justify;
+//             max-width: 80vw;
+
+//             p {
+//                 font-family: "Recoleta";
+//                 // font-size: $mobile-project-paragraph-font-size;
+//                 line-height: 20px;
+//                 margin: 1rem 0 .5rem 0;
+//             }
+
+//         }
+
+//         .mission-author {
+//             h1 {
+//                 // font-size: $mobile-portfolio-paragraph-section-font-size;
+//                 line-height: 30px;
+//                 word-spacing: 1.43px;
+//             }
+
+//             h2 {
+//                 // font-size: $mobile-services-chip-font-size;
+//                 font-weight: 400;
+//                 line-height: 5px;
+//                 word-spacing: 1.43px;
+//             }
+//         }
+//     }
+// }
